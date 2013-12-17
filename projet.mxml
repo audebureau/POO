@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:s="library://ns.adobe.com/flex/spark"
+				xmlns:mx="library://ns.adobe.com/flex/mx"
+				layout="absolute">
+	<fx:Style source="pro.css"/>
+
+	
+	
+	
+	
+	
+	
+	<mx:Canvas height="100%" width="100%">
+		<fx:Script>
+			<![CDATA[
+				import mx.collections.ArrayCollection;
+				
+				private var dp:ArrayCollection = new ArrayCollection(["Choisir la région ", "Alsace",
+					"Aquitaine", "Auvergne", "Basse-Normandie ","Bourgogne ","Bretagne ","Centre ","Champagne-Ardenne ","Corse ","Franche-Comté ","Huate-Normandie ","Ile de FRance ","Languedoc-Roussillon "," Limousin","Lorraine ","Midi-Pyrénées ","Nord pas de calais ","Pays de la Loire ","Picardie ","Poitou Charente ","Provence Alpes Côtes d’Azur ","Rhônes Alpes ","Martinique ","Guadeloupe ","Guyane ","Mayotte ","Réunion "]);
+				
+				protected function button(event:MouseEvent):void
+				{
+					navigateToURL(new URLRequest("region.mxml"));
+					
+				}
+				
+			]]>
+		</fx:Script>
+		<mx:ComboBox creationComplete="cb.dataProvider=dp" id="cb" change="" /> 
+		<s:Image y="0" width="686" height="454" smooth="true" source="assets/carte.png"/>
+		
+		<s:Button x="364" y="110" width="75" height="14" label="Ile de France"
+				  click="button(event)" fontSize="8"/>
+		<s:Button x="343" y="163" width="63" label="Centre" click="button(event)" fontSize="9"/>
+		<s:Button x="332" y="312" label="Midi-Pyrénnées" click="button(event)" fontSize="8"/>
+		<s:Button x="454" y="249" label="Rhônes Alpes" click="button(event)" fontSize="8"/>
+		<s:Button x="314" y="67" width="79" height="21" label="Haute Normandie" click="button(event)" fontSize="7"/>
+		<s:Button x="274" y="90" label="Basse Normandie" click="button(event)" fontSize="8"/>
+		<s:Button x="415" y="173" label="Bourgogne" click="button(event)" fontSize="8"/>
+		<s:Button x="281" y="281" label="Aquitaine" click="button(event)" fontSize="8"/>
+		<s:Button x="212" y="111" label="Bretagne" click="button(event)" fontSize="8"/>
+		<s:Button x="475" y="106" label="Lorraine" click="button(event)" fontSize="8"/>
+		<s:Button x="257" y="152" label="Pays de la Loire" click="button(event)" fontSize="8"/>
+		<s:Button x="273" y="211" label="Poitou Charentes" click="button(event)" fontSize="8"/>
+		<s:Button x="328" y="240" label="Limousin" click="button(event)" fontSize="8"/>
+		<s:Button x="382" y="222" label="Auvergne" click="button(event)" fontSize="8"/>
+		<s:Button x="357" y="350" label="Languedoc-Roussillon" click="button(event)" fontSize="8"/>
+		<s:Button x="458" y="312" label="Provence Alpes Côtes d'Azur" click="button(event)" fontSize="8"/>
+		<s:Button x="521" y="391" label="Corse" click="button(event)" fontSize="8"/>
+		<s:Button x="386" y="67" label="Picardie" click="button(event)" fontSize="8"/>
+		<s:Button x="375" y="33" label="Nord pas de calais" click="button(event)" fontSize="8"/>
+		<s:Button x="411" y="124" label="Champagne -Ardenne" click="button(event)" fontSize="8"/>
+		<s:Button x="543" y="127" label="Alsace" click="button(event)" fontSize="8"/>
+		<s:Button x="486" y="197" label="Franche Comté" click="button(event)" fontSize="8"/>
+		<s:Button x="84" y="312" label="Mayotte" click="button(event)" fontSize="8"/>
+		<s:Button x="84" y="350" label="La Réunion" click="button(event)" fontSize="8"/>
+		<s:Button x="84" y="269" label="Guyane" click="button(event)" fontSize="8"/>
+		<s:Button x="84" y="222" label="Martinique" click="button(event)" fontSize="8"/>
+		<s:Button x="84" y="173" label="Guadeloupe" click="button(event)" fontSize="8"/>
+	</mx:Canvas>
+</mx:Application>
